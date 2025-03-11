@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "C:\Users\justi\PycharmProjects\iTAML_ATK_Mk1\data_bdV2.py", line 49, in <module>
+    poisoned_test_set = torch.load('poisoned_test_set.pth')
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PycharmProjects\iTAML_ATK_Mk1\.venv\Lib\site-packages\torch\serialization.py", line 1425, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PycharmProjects\iTAML_ATK_Mk1\.venv\Lib\site-packages\torch\serialization.py", line 751, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PycharmProjects\iTAML_ATK_Mk1\.venv\Lib\site-packages\torch\serialization.py", line 732, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'poisoned_test_set.pth'
