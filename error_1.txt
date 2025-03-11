@@ -1,0 +1,16 @@
+(.venv) PS C:\Users\justi\PycharmProjects\iTAML_ATK_Mk1> python train_cifar.py 0
+{'checkpoint': 'results/cifar10poison/meta2_cifar_T10_71', 'savepoint': 'models/cifar10poison/meta2_cifar_T10_71', 'data_path': 'C:/Users/justi/PycharmProjects/iTAML_ATK_Mk1/poisoned_datasets', 'num_class': 10, 'class_per_task': 2, 'num_task': 5, 'test_samples_per_class': 1000, 'dataset': 'cifar10poison', 'optimizer': 'radam', 'epochs': 70, 'lr': 0.01, 'train_batch': 256, 'test_batch': 200, 'workers': 16, 'sess': 0, 'schedule': [20, 40, 60], 'gamma': 0.2, 'random_classes': False, 'validation': 0, 'memory': 2000, 'mu': 1, 'beta': 1.0, 'r': 2}
+  Total params: 1.23M 
+Traceback (most recent call last):
+  File "C:\Users\justi\PycharmProjects\iTAML_ATK_Mk1\train_cifar.py", line 145, in <module>
+    main()
+  File "C:\Users\justi\PycharmProjects\iTAML_ATK_Mk1\train_cifar.py", line 81, in main
+    inc_dataset = data.IncrementalDataset(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PycharmProjects\iTAML_ATK_Mk1\incremental_dataloader.py", line 61, in __init__
+    datasets = _get_dataset(dataset_name)  # This will now return PoisonedCIFAR10 for 'poisoned_cifar10'
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\PycharmProjects\iTAML_ATK_Mk1\incremental_dataloader.py", line 323, in _get_dataset
+    raise NotImplementedError("Unknown dataset {}.".format(dataset_name))
+NotImplementedError: Unknown dataset cifar10poison.
+(.venv) PS C:\Users\justi\PycharmProjects\iTAML_ATK_Mk1> 
